@@ -27,7 +27,7 @@ class HomeController extends Controller
         $popular = $this->get_curl('https://newsapi.org/v2/everything?q=health&apiKey=689366807ee9409a8bb1b93949bc5eb9');
         $popularNews = $popular['articles'][0];
 
-        return view('/home/index.blade.php', [
+        return view('/home/index', [
             'title' => 'Spirit | Home',
             'head' => $headNews,
             'latest' => $latestNews,
